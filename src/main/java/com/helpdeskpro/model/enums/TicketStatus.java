@@ -1,8 +1,0 @@
-package com.helpdeskpro.model.enums;
-
-public enum TicketStatus {
-    OPEN,
-    IN_PROGRESS,
-    DONE,
-    CANCELED
-}
