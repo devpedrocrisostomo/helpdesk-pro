@@ -1,0 +1,8 @@
+embed-server --std-out=echo --server-config=standalone.xml
+
+module add --name=org.postgresql --resources=/tmp/postgresql.jar --dependencies=java.sql,java.naming
+
+/subsystem=datasources/jdbc-driver=postgresql:add(driver-name=postgresql,driver-module-name=org.postgresql,driver-class-name=org.postgresql.Driver)
+/subsystem=datasources/data-source=HelpDeskDS:add(jndi-name=java:/jdbc/HelpDeskDS,driver-name=postgresql,connection-url="jdbc:postgresql://${env.DB_HOST:postgres}:${env.DB_PORT:5432}/${env.DB_NAME:helpdeskpro}",user-name="${env.DB_USER:helpdesk}",password="${env.DB_PASSWORD:helpdesk}",enabled=true,use-ccm=true,validate-on-match=true,background-validation=false)
+
+stop-embedded-server
