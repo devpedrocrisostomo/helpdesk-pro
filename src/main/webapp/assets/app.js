@@ -115,7 +115,8 @@ function renderLogin() {
     app.innerHTML = `
         <main class="login-page">
             <section class="login-brand">
-                <h1>HelpDesk Pro</h1>
+                <img class="login-logo" src="/assets/helpdesk-pro-logo.png" alt="HelpDesk Pro">
+                <h1>Atendimento eficiente. Solucoes inteligentes.</h1>
                 <p>Operacao de chamados, clientes e equipe tecnica em um painel direto para atendimento.</p>
             </section>
             <section class="login-panel">
@@ -126,7 +127,7 @@ function renderLogin() {
                         <input name="email" type="email" value="admin@helpdeskpro.local" required>
                     </label>
                     <label>Senha
-                        <input name="password" type="password" value="admin123" required>
+                        <input name="password" type="password" value="123456" required>
                     </label>
                     <button class="btn primary" type="submit">Entrar</button>
                 </form>
@@ -143,7 +144,7 @@ function renderApp() {
         <div class="shell">
             <aside class="sidebar">
                 <div class="brand-row">
-                    <div class="brand-mark">H</div>
+                    <img class="brand-logo" src="/assets/helpdesk-pro-logo.png" alt="HelpDesk Pro">
                     <h1 class="app-title">HelpDesk Pro</h1>
                 </div>
                 <nav class="nav">
